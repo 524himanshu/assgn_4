@@ -14,10 +14,10 @@
         <form style="width: 70%; max-width: 500px; border: 1px solid #ccc; padding: 20px; border-radius: 5px;" action="#" method="POST" onsubmit="return validateForm()">
             <label style="display: block; margin-bottom: 5px;" for="tagline">
                 Tagline on the Shirt:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="tagline" name="tagline" required value="Your Tagline Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="tagline" name="tagline" required>
 
             <label style="display: block; margin-bottom: 5px;" for="color">Color:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="color" name="color" required value="Your Color Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="color" name="color" required>
 
             <label style="display: block; margin-bottom: 5px;" for="size">Size:</label>
             <select style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="size" name="size" required>
@@ -31,70 +31,88 @@
             </select>
 
             <label style="display: block; margin-bottom: 5px;" for="quantity">Quantity:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="number" id="quantity" name="quantity" min="1" required value="1">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="number" id="quantity" name="quantity" min="1" required>
 
             <label style="display: block; margin-bottom: 5px;" for="delivery_date">Date of Delivery:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="date" id="delivery_date" name="delivery_date" required value="2023-10-10">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="date" id="delivery_date" name="delivery_date" required>
 
             <label style="display: block; margin-bottom: 5px;" for="other_details">Other Details:</label>
-            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="other_details" name="other_details" rows="4">Your other details here.</textarea>
-
-            <!-- Add more form fields here as needed -->
+            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="other_details" name="other_details" rows="4"></textarea>
 
             <label style="display: block; margin-bottom: 5px;" for="font_style">Font Style:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="font_style" name="font_style" value="Your Font Style Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="font_style" name="font_style">
 
             <label style="display: block; margin-bottom: 5px;" for="font_color">Font Color:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="color" id="font_color" name="font_color" value="#000000">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="color" id="font_color" name="font_color">
 
             <label style="display: block; margin-bottom: 5px;" for="tagline_placement">Tagline Placement:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="tagline_placement" name="tagline_placement" value="Your Tagline Placement Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="tagline_placement" name="tagline_placement">
 
             <label style="display: block; margin-bottom: 5px;" for="custom_text">Additional Custom Text:</label>
-            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="custom_text" name="custom_text" rows="4">Your additional custom text here.</textarea>
+            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="custom_text" name="custom_text" rows="4"></textarea>
 
             <label style="display: block; margin-bottom: 5px;" for="upload_image">Upload Image or Logo:</label>
             <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="file" id="upload_image" name="upload_image">
 
             <label style="display: block; margin-bottom: 5px;" for="full_name">Full Name:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="full_name" name="full_name" required value="Your Full Name Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="full_name" name="full_name" required>
 
             <label style="display: block; margin-bottom: 5px;" for="email">Email Address:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="email" id="email" name="email" required value="youremail@example.com">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="email" id="email" name="email" required>
 
             <label style="display: block; margin-bottom: 5px;" for="phone">Phone Number:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="tel" id="phone" name="phone" required value="1234567890">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="tel" id="phone" name="phone" required>
 
             <label style="display: block; margin-bottom: 5px;" for="street_address">Street Address:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="street_address" name="street_address" required value="Your Street Address Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="street_address" name="street_address" required>
 
             <label style="display: block; margin-bottom: 5px;" for="city">City:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="city" name="city" required value="Your City Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="city" name="city" required>
 
             <label style="display: block; margin-bottom: 5px;" for="state">State:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="state" name="state" required value="Your State Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="state" name="state" required>
 
             <label style="display: block; margin-bottom: 5px;" for="zip_code">PinCode:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="zip_code" name="zip_code" required value="Your PinCode Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="zip_code" name="zip_code" required>
 
             <label style="display: block; margin-bottom: 5px;" for="country">Country:</label>
-            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="country" name="country" required value="Your Country Here">
+            <input style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" type="text" id="country" name="country" required>
 
             <label style="display: block; margin-bottom: 5px;" for="special_requests">Special Requests or Notes:</label>
-            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="special_requests" name="special_requests" rows="4">Your special requests or notes here.</textarea>
-
-            <!-- Add more form fields here as needed -->
+            <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="special_requests" name="special_requests" rows="4"></textarea>
 
             <input style="background-color: grey; color: white; cursor: pointer;" type="submit" value="Place Order">
         </form>
 
-        <!-- Receipt will be displayed as a popup -->
-
+        <div id="receipt" style="display: none; margin-top: 20px;">
+            <h2>Order Receipt</h2>
+            <p><strong>Tagline on the Shirt:</strong> <span id="receiptTagline"></span></p>
+            <p><strong>Color:</strong> <span id="receiptColor"></span></p>
+            <p><strong>Size:</strong> <span id="receiptSize"></span></p>
+            <p><strong>Quantity:</strong> <span id="receiptQuantity"></span></p>
+            <p><strong>Date of Delivery:</strong> <span id="receiptDeliveryDate"></span></p>
+            <p><strong>Font Style:</strong> <span id="receiptFontStyle"></span></p>
+            <p><strong>Font Color:</strong> <span id="receiptFontColor"></span></p>
+            <p><strong>Tagline Placement:</strong> <span id="receiptTaglinePlacement"></span></p>
+            <p><strong>Additional Custom Text:</strong> <span id="receiptCustomText"></span></p>
+            <p><strong>Full Name:</strong> <span id="receiptFullName"></span></p>
+            <p><strong>Email Address:</strong> <span id="receiptEmail"></span></p>
+            <p><strong>Phone Number:</strong> <span id="receiptPhone"></span></p>
+            <p><strong>Street Address:</strong> <span id="receiptStreetAddress"></span></p>
+            <p><strong>City:</strong> <span id="receiptCity"></span></p>
+            <p><strong>State:</strong> <span id="receiptState"></span></p>
+            <p><strong>PinCode:</strong> <span id="receiptZipCode"></span></p>
+            <p><strong>Country:</strong> <span id="receiptCountry"></span></p>
+            <p><strong>Special Requests or Notes:</strong> <span id="receiptSpecialRequests"></span></p>
+            <!-- Add more order details here as needed -->
+            <p><em>Thank you for placing your order!</em></p>
+        </div>
+        
     </div>
 
     <script>
         function validateForm() {
-           const tagline = document.getElementById('tagline').value;
+            const tagline = document.getElementById('tagline').value;
             const color = document.getElementById('color').value;
             const size = document.getElementById('size').value;
             const quantity = document.getElementById('quantity').value;
@@ -132,6 +150,7 @@
         }
 
         function showReceipt() {
+            // Get form inputs to display in the receipt
             const tagline = document.getElementById('tagline').value;
             const color = document.getElementById('color').value;
             const size = document.getElementById('size').value;
@@ -151,7 +170,7 @@
             const country = document.getElementById('country').value;
             const specialRequests = document.getElementById('special_requests').value;
 
-           // Set the receipt content dynamically
+            // Set the receipt content dynamically
             document.getElementById('receiptTagline').textContent = tagline;
             document.getElementById('receiptColor').textContent = color;
             document.getElementById('receiptSize').textContent = size;
@@ -173,7 +192,6 @@
 
             // Display the receipt
             document.getElementById('receipt').style.display = 'block';
-            
         }
     </script>
 </body>
