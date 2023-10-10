@@ -81,7 +81,8 @@
             <label style="display: block; margin-bottom: 5px;" for="special_requests">Special Requests or Notes:</label>
             <textarea style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" id="special_requests" name="special_requests" rows="4"></textarea>
 
-            <input style="background-color: grey; color: white; cursor: pointer;" type="submit" value="Place Order">
+            <p><strong>Submission Time:</strong> <span id="receiptSubmissionTime"></span></p>
+         <input style="background-color: grey; color: white; cursor: pointer;" type="submit" value="Place Order">
         </form>
 
         <div id="receipt" style="display: none; margin-top: 20px;">
@@ -151,6 +152,7 @@
 
         function showReceipt() {
             // Get form inputs to display in the receipt
+            
             const tagline = document.getElementById('tagline').value;
             const color = document.getElementById('color').value;
             const size = document.getElementById('size').value;
@@ -169,6 +171,11 @@
             const zipCode = document.getElementById('zip_code').value;
             const country = document.getElementById('country').value;
             const specialRequests = document.getElementById('special_requests').value;
+            // Get the current date and time
+              const currentTime = new Date();
+
+    // Format the current time as a string (e.g., "2023-10-10 14:30:00")
+    const formattedTime = `${currentTime.getFullYear()}-${(currentTime.getMonth() + 1).toString().padStart(2, '0')}-${currentTime.getDate().toString().padStart(2, '0')} ${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}:${currentTime.getSeconds().toString().padStart(2, '0')}`;
 
             // Set the receipt content dynamically
             document.getElementById('receiptTagline').textContent = tagline;
@@ -189,9 +196,13 @@
             document.getElementById('receiptZipCode').textContent = zipCode;
             document.getElementById('receiptCountry').textContent = country;
             document.getElementById('receiptSpecialRequests').textContent = specialRequests;
+            // Set the submission time in the receipt
+           document.getElementById('receiptSubmissionTime').textContent = formattedTime;
+
 
             // Display the receipt
             document.getElementById('receipt').style.display = 'block';
+            
         }
     </script>
 </body>
