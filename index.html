@@ -94,7 +94,37 @@
 
     <script>
         function validateForm() {
-            // ... (Your validation logic)
+            const tagline = document.getElementById('tagline').value;
+            const color = document.getElementById('color').value;
+            const size = document.getElementById('size').value;
+            const quantity = document.getElementById('quantity').value;
+            const deliveryDate = document.getElementById('delivery_date').value;
+            const fontStyle = document.getElementById('font_style').value;
+            const fontColor = document.getElementById('font_color').value;
+            const taglinePlacement = document.getElementById('tagline_placement').value;
+            const customText = document.getElementById('custom_text').value;
+            const fullName = document.getElementById('full_name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const streetAddress = document.getElementById('street_address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipCode = document.getElementById('zip_code').value;
+            const country = document.getElementById('country').value;
+            const specialRequests = document.getElementById('special_requests').value;
+
+            // Validation rules
+            if (tagline.length === 0) {
+                alert('Please enter a tagline.');
+                return false;
+            }
+
+            if (quantity < 1) {
+                alert('Quantity must be at least 1.');
+                return false;
+            }
+
+            // Add more validation checks as needed
 
             // If all validations pass, the form will be submitted
             showReceipt();
@@ -102,7 +132,49 @@
         }
 
         function showReceipt() {
-            // ... (Your receipt content)
+            // Get form inputs to display in the receipt
+            const tagline = document.getElementById('tagline').value;
+            const color = document.getElementById('color').value;
+            const size = document.getElementById('size').value;
+            const quantity = document.getElementById('quantity').value;
+            const deliveryDate = document.getElementById('delivery_date').value;
+            const fontStyle = document.getElementById('font_style').value;
+            const fontColor = document.getElementById('font_color').value;
+            const taglinePlacement = document.getElementById('tagline_placement').value;
+            const customText = document.getElementById('custom_text').value;
+            const fullName = document.getElementById('full_name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const streetAddress = document.getElementById('street_address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipCode = document.getElementById('zip_code').value;
+            const country = document.getElementById('country').value;
+            const specialRequests = document.getElementById('special_requests').value;
+
+            // Set the receipt content dynamically
+            document.getElementById('receiptTagline').textContent = tagline;
+            document.getElementById('receiptColor').textContent = color;
+            document.getElementById('receiptSize').textContent = size;
+            document.getElementById('receiptQuantity').textContent = quantity;
+            document.getElementById('receiptDeliveryDate').textContent = deliveryDate;
+            document.getElementById('receiptFontStyle').textContent = fontStyle;
+            document.getElementById('receiptFontColor').textContent = fontColor;
+            document.getElementById('receiptTaglinePlacement').textContent = taglinePlacement;
+            document.getElementById('receiptCustomText').textContent = customText;
+            document.getElementById('receiptFullName').textContent = fullName;
+            document.getElementById('receiptEmail').textContent = email;
+            document.getElementById('receiptPhone').textContent = phone;
+            document.getElementById('receiptStreetAddress').textContent = streetAddress;
+            document.getElementById('receiptCity').textContent = city;
+            document.getElementById('receiptState').textContent = state;
+            document.getElementById('receiptZipCode').textContent = zipCode;
+            document.getElementById('receiptCountry').textContent = country;
+            document.getElementById('receiptSpecialRequests').textContent = specialRequests;
+
+            // Display the receipt
+            document.getElementById('receipt').style.display = 'block';
+        
 
             // Display the receipt modal (popup)
             alert("Order Receipt:\n" +
