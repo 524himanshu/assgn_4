@@ -143,6 +143,8 @@
                 return false;
             }
 
+
+            const deliveryDate = document.getElementById('delivery_date').value;
             // Add more validation checks as needed
 
             // If all validations pass, the form will be submitted
@@ -182,7 +184,7 @@
             document.getElementById('receiptColor').textContent = color;
             document.getElementById('receiptSize').textContent = size;
             document.getElementById('receiptQuantity').textContent = quantity;
-            document.getElementById('receiptDeliveryDate').textContent = deliveryDate;
+          document.getElementById('receiptDate').textContent = receiptDate.toLocaleString();
             document.getElementById('receiptFontStyle').textContent = fontStyle;
             document.getElementById('receiptFontColor').textContent = fontColor;
             document.getElementById('receiptTaglinePlacement').textContent = taglinePlacement;
